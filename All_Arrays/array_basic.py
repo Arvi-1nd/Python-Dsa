@@ -55,3 +55,25 @@ def recsorted(arr, idx=0):
     return recsorted(arr,idx+1)
 
 print(recsorted([45,34,21,11]))
+
+#Removing duplicates
+
+def removeduplicates(arr):
+    duplicates = set()
+    idx = 0
+    
+    for i in range(len(arr)):
+        if  arr[i] not in duplicates:
+            duplicates.add(arr[i])
+            arr[idx] = arr[i]
+            idx += 1
+    return idx
+
+arr = [1,2,1,2,3,2,3,5,4]
+
+new_size = removeduplicates(arr)
+
+for i in range(new_size):
+    print(arr[i], end=" ")
+
+
