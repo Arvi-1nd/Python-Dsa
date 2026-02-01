@@ -77,3 +77,14 @@ for i in range(new_size):
     print(arr[i], end=" ")
 
 
+# for printing all subArrays
+
+subarr = [1,2,3,4]
+
+net = len(subarr)
+for i in range(net):
+    for j in range(i, net):
+        for k in range(i, j+1):
+            print(subarr[k], end =" ")
+        print()
+    
