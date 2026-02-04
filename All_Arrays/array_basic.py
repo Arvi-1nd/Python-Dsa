@@ -88,3 +88,17 @@ for i in range(net):
             print(subarr[k], end =" ")
         print()
     
+
+# Reversing an array
+
+def reverse_arr(arr):
+    i,j = 0, len(arr)-1
+    
+    while i < j:
+        arr[i],arr[j] = arr[j],arr[i]
+        i += 1
+        j -= 1
+        
+    return arr
+
+print(reverse_arr([4,3,2,1]))
