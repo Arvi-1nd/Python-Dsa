@@ -123,3 +123,31 @@ rotateArr(arr,d)
 
 for i in range(len(arr)):
     print(arr[i], end=" ")
+    
+    
+    
+    
+def pushZerosToend(ars):
+    n = len(ars)
+    temp = [0] * n
+    
+    j = 0
+    for i in range(n):
+        if ars[i] != 0:
+            temp[j] = ars[i]
+            j += 1
+    
+    while j < n:
+        temp[j] = 0
+        j += 1
+        
+    for i in range(n):
+        ars[i] = temp[i]
+        
+if __name__ == "__main__":
+        ars = [1, 2, 0, 4, 3, 0, 5, 0]
+        pushZerosToend(ars)
+        
+        
+        for num in ars:
+            print(num, end=" ")
