@@ -151,3 +151,30 @@ if __name__ == "__main__":
         
         for num in ars:
             print(num, end=" ")
+            
+            
+
+# To make the array equal
+
+def minOps(arr, n, k):
+    max1 = max(arr)
+    res = 0
+    
+    for i in range(0,n):
+        if ((max1- arr[i]) % k  != 0):
+            return -1
+        
+        else:
+            res += (max1-arr[i]) / k
+            
+    
+    return int(res)
+
+
+arr = [21,56,34,32,22]
+
+n = len(arr)
+
+k = 6
+
+print(minOps(arr,n,k)) 
